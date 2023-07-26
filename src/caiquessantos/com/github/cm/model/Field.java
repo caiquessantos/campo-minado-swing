@@ -104,11 +104,11 @@ public class Field {
 	public void marcarEdesmarcar() {
 		if (!aberto) {
 			marcado = !marcado;
-		}
-		if (marcado) {
-			notificarObservadores(EventoNoCampo.MARCAR);
-		} else {
-			notificarObservadores(EventoNoCampo.DESMARCAR);
+			if (marcado) {
+				notificarObservadores(EventoNoCampo.MARCAR);
+			} else {
+				notificarObservadores(EventoNoCampo.DESMARCAR);
+			}
 		}
 	}
 	
